@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+/// A view that wraps UIImagePickerController for image selection.
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
     var sourceType: UIImagePickerController.SourceType
@@ -25,7 +26,8 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
-    
+
+    /// A coordinator to handle image picker delegate methods.
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         let parent: ImagePicker
         

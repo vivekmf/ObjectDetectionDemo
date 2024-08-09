@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view for displaying the selected image and navigating to object detection.
 struct SelectedImageView: View {
     var image: UIImage
     
@@ -38,6 +39,7 @@ struct SelectedImageView: View {
     }
 }
 
+/// A reusable button view for the selected image screen.
 struct SelectedImageButtonView: View {
     var iconName: String
     var text: String

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that presents the image picker.
 struct ImagePickerView: View {
     @Binding var selectedImage: UIImage?
     @Environment(\.presentationMode) var presentationMode

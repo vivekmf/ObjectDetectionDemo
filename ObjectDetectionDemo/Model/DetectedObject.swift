@@ -9,6 +9,7 @@ import Foundation
 import CoreGraphics
 import SwiftUI
 
+/// A model representing a detected object with a unique identifier, label, confidence score, bounding box, and associated color.
 struct DetectedObject: Identifiable {
     var id: UUID { UUID() }
     let label: String

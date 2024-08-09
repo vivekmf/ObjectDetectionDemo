@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The main view for the home screen, allowing the user to select an image and navigate to object detection.
 struct HomeView: View {
     @State private var isImagePickerPresented = false
     @State private var selectedImage: UIImage?

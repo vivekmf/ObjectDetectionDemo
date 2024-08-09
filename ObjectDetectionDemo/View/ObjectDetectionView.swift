@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays the detected objects in an image.
 struct ObjectDetectionView: View {
     let image: UIImage
     @ObservedObject var viewModel = ObjectDetectionViewModel()
@@ -37,6 +38,7 @@ struct ObjectDetectionView: View {
         .navigationTitle("Object Detection")
     }
 
+    /// A function that overlays detected objects on the image.
     private func detectionOverlay(for imageSize: CGSize) -> some View {
         ForEach(viewModel.detectedObjects) { object in
             let boundingBox = boundingBox(for: object.boundingBox, in: imageSize)
@@ -56,6 +58,7 @@ struct ObjectDetectionView: View {
         }
     }
 
+    /// A helper function to convert a normalized bounding box to screen coordinates.
     private func boundingBox(for normalizedRect: CGRect, in imageSize: CGSize) -> CGRect {
         let adjustedWidth = normalizedRect.width * imageSize.width
         let adjustedHeight = normalizedRect.height * imageSize.height
