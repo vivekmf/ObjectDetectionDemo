@@ -35,8 +35,8 @@ The project is organized into several files, each responsible for specific funct
 
 ### Prerequisites
 
-- Xcode 15.0 or later
-- iOS 15.0 or later
+- Xcode Version 16.0 beta 5 (16A5221g) or later
+- iOS 18.0 beta 5 or later
 
 ### Setup
 
